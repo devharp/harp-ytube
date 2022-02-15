@@ -36,7 +36,7 @@ function init() {
         console.log(data.player_response.videoDetails);
         const videodetails = data.player_response.videoDetails;
 
-        video.innerHTML = '<div class="d-flex justify-content-center my-2"><img style="width: ' + (document.querySelector('.container').clientWidth - 50) + 'px" src="' + String(videodetails.thumbnail.thumbnails[0].url) + '"\
+        video.innerHTML = '<div class="d-flex justify-content-center my-2"><img style="width: ' + (document.querySelector('.container').clientWidth - 50) + 'px; max-width: 500px;" src="' + String(videodetails.thumbnail.thumbnails[0].url) + '"\
         alt="image"></div>\
 <div>\
     <p>' + String(videodetails.title) + '</p>\

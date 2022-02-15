@@ -35,28 +35,76 @@
                 </div>
             </div>
             <div id="from-server" class="d-flex flex-column align-items-center">Enter the link and click search</div>
-            
+
             <!-- <div id="from-server" class="d-flex flex-column align-items-center">
                 <div class="d-flex justify-content-center my-2"><img src="https://i.ytimg.com/vi/aWzlQ2N6qqg/0.jpg"
                         alt="image" style="width: 60%;"></div>
                 <div>
-                    <p>Title: Video title here</p>
+                    <p class="my-1">Title: <strong>Video title here</strong></p>
+                    <p class="my-1">Length: <strong>1hr 22min 30sec</strong></p>
                 </div>
-                <div class="d-flex">
-                    <div class="dropdown">
+                <div class="d-flex my-2">
+                    <div class="dropdown mx-1">
                         <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                             data-mdb-toggle="dropdown" aria-expanded="false">
                             Quality
                         </a>
 
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <li onclick="qualitySelected(22)" class="dropdown-item">Action</li>
-                            
+                            <li onclick="qualitySelected(22)" class="dropdown-item">144p</li>
+                            <li onclick="qualitySelected(22)" class="dropdown-item">240p</li>
+                            <li onclick="qualitySelected(22)" class="dropdown-item">360p</li>
+                            <li onclick="qualitySelected(22)" class="dropdown-item">480p</li>
+                            <li onclick="qualitySelected(22)" class="dropdown-item">720p</li>
+                            <li onclick="qualitySelected(22)" class="dropdown-item">1080p</li>
                         </ul>
                     </div>
-                    <button onclick="gotoMediaUrl()" class="btn btn-primary mx-2">Download</button>
-                </div>
+                    <div class="dropdown mx-1">
+                        <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-mdb-toggle="dropdown" aria-expanded="false">
+                            Format
+                        </a>
 
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li onclick="qualitySelected(22)" class="dropdown-item">Video and Audio</li>
+                            <li onclick="qualitySelected(22)" class="dropdown-item">Video only</li>
+                            <li onclick="qualitySelected(22)" class="dropdown-item">Audio only</li>
+                        </ul>
+                    </div>
+                    <div class="dropdown mx-1">
+                        <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-mdb-toggle="dropdown" aria-expanded="false">
+                            Container
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li onclick="qualitySelected(22)" class="dropdown-item">mp4</li>
+                            <li onclick="qualitySelected(22)" class="dropdown-item">webm</li>
+                            <li onclick="qualitySelected(22)" class="dropdown-item">mp3</li>
+                            <li onclick="qualitySelected(22)" class="dropdown-item">m4a</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="d-flex my-2 align-items-center">
+                    <div class=""><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" /></div>
+                    <div class="mx-1">Trim video</div>
+                    <div class="mx-1">
+                        <div class="form-outline">
+                            <input id="from-video-seconds" class="form-control" type="text" placeholder="seconds" style="max-width: 10ch;">
+                            <label class="form-label" for="from-video-seconds">from</label>
+                        </div>
+                    </div>
+                    <div class="mx-1">-</div>
+                    <div class="mx-1">
+                        <div class="form-outline">
+                            <input id="to-video-seconds" class="form-control" type="text" placeholder="seconds" style="max-width: 10ch;">
+                            <label class="form-label" for="to-video-seconds">to</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-2">
+                    <button onclick="gotoMediaUrl()" class="btn btn-primary mx-1">Download</button>
+                </div>
             </div> -->
         </div>
     </div>
