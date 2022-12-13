@@ -1,19 +1,29 @@
 {
-  "name": "youtube-dl",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "dev": "nodemon prog.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.17.2",
-    "nodemon": "^2.0.15",
-    "socket.io": "^4.4.1",
-    "ytdl-core": "^4.10.1"
-  }
+    "name": "harp-ytube",
+    "version": "1.0.0",
+    "description": "Download YouTube video using NodeJS ## Installation",
+    "main": "index.js",
+    "scripts": {
+        "dev": "nodemon prog.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/devharp/harp-ytube.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/devharp/harp-ytube/issues"
+    },
+    "homepage": "https://github.com/devharp/harp-ytube#readme",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "dotenv": "^16.0.3",
+        "express": "^4.18.2",
+        "jsonwebtoken": "^8.5.1",
+        "nodemon": "^2.0.20",
+        "sqlite3": "^5.1.3"
+    }
 }
