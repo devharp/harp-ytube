@@ -1,6 +1,7 @@
 import { Button, TextField } from '@mui/material';
 import { useEffect, useState } from 'react';
 import Login from './page/Login';
+import Home from './page/Home';
 
 function App() {
   let once = false;
@@ -78,10 +79,7 @@ function App() {
     <>
       { (page === 0 || page === 1) && <Login page={page} handleLogin={handleLogin} handleSignUp={handleSignUp} handleLoginPage={handleLoginPage} handleSignUpPage={handleSignUpPage} />}
 
-      {(page === 2) && <div>
-        <h1>Other Page</h1>
-        <button onClick={() => { window.localStorage.setItem('token', null); authToken(); }} >logout</button>
-      </div>}
+      {(page === 2) && <Home host={host} authToken={authToken} />}
     </>
   )
 }

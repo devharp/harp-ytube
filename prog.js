@@ -2,8 +2,9 @@ require('dotenv').config();
 const express = require('express'),
     cors = require('cors'),
     jwt = require('jsonwebtoken'),
-    crypto = require('crypto')
-sqlite = require('sqlite3');
+    crypto = require('crypto'),
+    fetch = require('node-fetch'),
+    sqlite = require('sqlite3');
 
 let db = null;
 const app = express();
@@ -100,6 +101,28 @@ app.get('/auth', (req, res) => {
     } catch (err) {
         console.log(err)
         res.sendStatus(501);
+    }
+});
+
+app.get('/search', async(req, res) => {
+    try {
+        if (req.query.query === undefined || req.query.query === null) {
+            return res.sendStatus(501);
+        }
+
+        const secret_api = `https://suggestqueries-clients6.youtube.com/complete/search?client=youtube&hl=en&gl=in&gs_rn=64&gs_ri=youtube&q=${req.query.query}`;
+
+        const fres = await fetch(secret_api);
+        const payload = await fres.text();
+
+        const match = /(\[")(.*?)(")/gi.exec(payload);
+
+        console.log(match);
+
+        res.sendStatus(200);
+
+    } catch (err) {
+        return res.sendStatus(501);
     }
 });
 
